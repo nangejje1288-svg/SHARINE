@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Sharine Tours and our mission to deliver memorable travel experiences across Uganda.">
+  <title>About Us | Sharine Tours</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.jpeg">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <video class="site-bg-video" autoplay muted loop playsinline>
+    <source src="images/vidio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="site-bg-overlay" aria-hidden="true"></div>
+  <div class="site-floater" aria-hidden="true">
+    <img src="images/tour 7.jpg" alt="" loading="lazy">
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/logo.jpeg" alt="Sharine Touring Company" class="brand-logo"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span> <button class="scroll-to-top" aria-label="Scroll to top">↑</button>
+  <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+  <button class="language-toggle" aria-label="Toggle language">EN</button>
+  <button class="search-toggle" aria-label="Toggle search">🔍</button>
+  <button class="menu-toggle" aria-label="Toggle menu">☰</button></span>
+        <span></span>
+        <span></span>
+      </button>
+      <button onclick="menubar()" class="menu-toggle" aria-label="Toggle menu">☰
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Tours</a>
+        <a href="#gallery">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      </button>
+    </div>
+  </header>
+ 
+  <div class="ball"></div>
+  <style>
+.ball{
+  width: 100px;
+  height: 100px;
+  background-color: #4CAF50;
+  border-radius: 50%;
+  margin: 20px auto;
+
+}
+</style>
+  <script>
+document.querySelector(".ball").animate([
+  { transform: "scale(1)" },
+  { transform: "scale(1.5)" }
+], {
+  duration: 1000,
+  iterations: Infinity,
+  direction: "alternate"
+});
+  </script>
+  <main>
+    <section class="section container" data-reveal>
+      <div class="page-header">
+        <p class="eyebrow">About Us</p>
+        <h1>We are Sharine Tours</h1>
+        <p>Passionate travel experts dedicated to creating authentic Uganda experiences with professionalism, safety, and warmth.</p>
+      </div>
+
+      <div class="split-grid" data-reveal>
+        <div class="content-block">
+          <h2>Our Story</h2>
+          <p>What began as a small team of local guides has grown into a respected travel partner for visitors from Uganda and around the world. We have shared the beauty of Uganda’s forests, lakes, cities, and communities with thousands of travelers.</p>
+        </div>
+        <div class="image-card">
+          <img src="images/tour 7.jpg" alt="Uganda travel scenery" loading="lazy">
+        </div>
+      </div>
+
+      <div class="content-block">
+        <h2>What Sets Us Apart</h2>
+        <ul class="benefits-list">
+          <li>Local expertise in Uganda’s top destinations</li>
+          <li>Custom itineraries designed for your interests</li>
+          <li>Professional guides, drivers, and travel support</li>
+          <li>Safe, reliable, and friendly service</li>
+          <li>Strong commitment to sustainable tourism</li>
+        </ul>
+      </div>
+
+      <div class="content-block">
+        <h2>Our Mission</h2>
+        <p>To create remarkable travel journeys that connect people with Uganda’s nature, culture, and hospitality.</p>
+      </div>
+
+      <div class="content-block">
+        <h2>Our Vision</h2>
+        <p>To become the leading travel company in East Africa by delivering thoughtful, unforgettable experiences and helping guests discover the best of Uganda.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Sharine Tours</h3>
+        <p>Authentic Uganda travel experiences crafted with care and local knowledge.</p>
+        <p>Contact: <a href="mailto:sharinetour@gmail.com">sharinetour@gmail.com</a> • WhatsApp: <a href="https://wa.me/256705058048">+256 705 058048</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="destinations.html">Destinations</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Sharine Tours. All rights reserved.</p>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/256705058048?text=Hello%20Sharine%20Tours" target="_blank" rel="noreferrer noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+</body>
+</html>

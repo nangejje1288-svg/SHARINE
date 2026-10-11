@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sharine Tours offers premium Uganda travel experiences with guided safaris, gorilla trekking, and custom itineraries.">
+  <title>Sharine Tours | Discover Uganda</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.jpeg">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <video class="site-bg-video" autoplay muted loop playsinline>
+    <source src="images/vidio.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+   
+  <div class="site-bg-overlay" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><img src="images/logo.jpeg" alt="Sharine Touring Company" class="brand-logo"></a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="destinations.html">Tours</a>
+        <a href="#gallery">Gallery</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="images/logo.jpeg"></div>
+  <style>
+.images/logo.jpeg {
+  animation: wave 2s infinite alternate;
+}
+
+@keyframes wave {
+  from { transform: rotate(-2deg); }
+  to { transform: rotate(2deg); }
+}
+</style>
+  <main>
+    <section class="hero">
+      <div class="hero-copy container">
+        <p class="eyebrow">Uganda | Safari | Culture | Adventure</p>
+        <h1>Experience the Heart of Uganda with Sharine Tours</h1>
+        <p>From gorilla trekking in Bwindi to luxury escapes on Lake Bunyonyi, we design unforgettable journeys with local expertise and trusted hospitality.</p>
+        <div class="hero-actions">
+          <a href="destinations.html" class="btn btn-primary">Explore Destinations</a>
+          <a href="plantrip.html" class="btn btn-secondary">Plan Your Trip</a>
+          <a href="https://wa.me/256705058048?text=Hello%20Sharine%20Tours%20I%20want%20to%20donate" target="_blank" rel="noreferrer noopener" class="btn btn-donate">Donate via WhatsApp</a>
+        </div>
+      </div>
+          <div class="site-floater" aria-hidden="true">
+            <img src="images/tour 1.avif" alt="" loading="lazy">
+          </div>
+    </section>
+
+  <button class="btn prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="btn next" onclick="changeSlide(1)">&#10095;</button>
+    <section class="section container" data-reveal>
+      <div class="split-grid">
+        <div>
+           <h1>Top Places to Visit in Uganda</h1>
+  <ul>
+    <li><strong>Bwindi Impenetrable National Park</strong> – Famous for gorilla trekking and bird watching.</li>
+    <li><strong>Murchison Falls National Park</strong> – Home to the mighty Nile waterfall and diverse wildlife.</li>
+    <li><strong>Queen Elizabeth National Park</strong> – Known for tree-climbing lions and boat safaris.</li>
+    <li><strong>Lake Victoria</strong> – Africa’s largest lake, great for fishing and island tours.</li>
+    <li><strong>Jinja – Source of the Nile</strong> – Adventure capital with rafting and bungee jumping.</li>
+    <li><strong>Rwenzori Mountains National Park</strong> – Snow-capped peaks and challenging hikes.</li>
+    <li><strong>Lake Bunyonyi</strong> – Scenic lake with 29 islands, perfect for relaxation.</li>
+    <li><strong>Sipi Falls</strong> – Stunning waterfalls on Mount Elgon slopes.</li>
+    <li><strong>Kampala City</strong> – Vibrant capital with culture, markets, and nightlife.</li>
+    <li><strong>Ziwa Rhino Sanctuary</strong> – The only place to see wild rhinos in Uganda.</li>
+  </ul>
+          <h2>Why Choose Sharine Tours?</h2>
+          <p>We combine deep local knowledge with thoughtful travel design to create experiences that feel personal, seamless, and truly memorable.</p>
+        </div>
+        <div class="feature-list">
+          <div class="feature-card">
+            <h3>Tailored Itineraries</h3>
+            <p>Custom journeys built around your interests, budget, and travel style.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Trusted Local Guides</h3>
+            <p>Experienced guides who bring Uganda’s nature and culture to life.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Hassle-Free Planning</h3>
+            <p>We handle transport, accommodation, permits, and support from start to finish.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Flexible Travel Support</h3>
+            <p>Always available for questions, updates, and on-trip assistance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+<div id="weather">
+  <h2 id="city"></h2>
+  <p id="temperature"></p>
+  <p id="conditions"></p>
+</div>
+<script>
+const API_KEY = "YOUR_API_KEY"; // replace with your key
+const CITY = "Kampala"; // or any city
+
+async function fetchWeather() {
+  const response = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=${CITY}&appid=${API_KEY}&units=metric`
+  );
+  const data = await response.json();
+
+  document.getElementById("city").textContent = data.name;
+  document.getElementById("temperature").textContent =
+    Math.round(data.main.temp) + "°C";
+  document.getElementById("conditions").textContent =
+    data.weather[0].description;
+
+  // Predict rain
+  if (data.weather[0].main.toLowerCase().includes("rain")) {
+    alert("🌧 It looks like it will rain!");
+  }
+}
+
+fetchWeather();
+</script>
+    <section class="section container">
+      <div class="section-header">
+        <p class="eyebrow">Featured Destinations</p>
+        <h2>Discover the Best of Uganda</h2>
+      </div>
+      <div class="card-grid">
+        <article class="destination-card">
+          <img src="images/tour 2.avif" alt="Bwindi forest gorilla trekking">
+          <div>
+            <h3>Bwindi Gorilla Trekking</h3>
+            <p>Meet mountain gorillas in their natural habitat and discover the magic of one of Africa’s most iconic wildlife experiences.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 3.avif" alt="Murchison Falls scenery">
+          <div>
+            <h3>Murchison Falls</h3>
+            <p>Witness the Nile plunge through a narrow gorge and enjoy safari drives, boat cruises, and breathtaking views.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 4.avif" alt="Lake Bunyonyi cottage retreat">
+          <div>
+            <h3>Lake Bunyonyi</h3>
+            <p>Relax by turquoise waters, explore quiet islands, and enjoy a peaceful retreat in Uganda’s most romantic lake destination.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 15.jpeg" alt="Tour 15">
+          <div>
+            <h3>Lake & Wildlife</h3>
+            <p>Explore scenic lakes and wildlife-rich reserves.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 16.jpeg" alt="Tour 16">
+          <div>
+            <h3>Cultural Highlights</h3>
+            <p>Experience local culture and community visits.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 17.jpeg" alt="Tour 17">
+          <div>
+            <h3>Sunset Retreats</h3>
+                  <img src="images/tour 2.avif" alt="Bwindi forest gorilla trekking" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 18.jpeg" alt="Tour 18">
+          <div>
+            <h3>Birdwatching Tours</h3>
+                  <img src="images/tour 3.avif" alt="Murchison Falls scenery" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 19.jpeg" alt="Tour 19">
+          <div>
+            <h3>River Adventures</h3>
+                  <img src="images/tour 4.avif" alt="Lake Bunyonyi cottage retreat" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 20.jpeg" alt="Tour 20">
+          <div>
+            <h3>Hiking Routes</h3>
+                  <img src="images/tour 15.jpeg" alt="Tour 15" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 21.jpeg" alt="Tour 21">
+          <div>
+            <h3>Photography Trips</h3>
+                  <img src="images/tour 16.jpeg" alt="Tour 16" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 22.jpeg" alt="Tour 22">
+          <div>
+            <h3>Island Getaways</h3>
+                  <img src="images/tour 17.jpeg" alt="Tour 17" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 23.jpeg" alt="Tour 23">
+          <div>
+            <h3>Adventure Sports</h3>
+                  <img src="images/tour 18.jpeg" alt="Tour 18" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 24.jpeg" alt="Tour 24">
+          <div>
+            <h3>Forest Walks</h3>
+                  <img src="images/tour 19.jpeg" alt="Tour 19" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 25.jpeg" alt="Tour 25">
+          <div>
+            <h3>Wellness Retreats</h3>
+                  <img src="images/tour 20.jpeg" alt="Tour 20" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 26.jpeg" alt="Tour 26">
+          <div>
+            <h3>Scenic Drives</h3>
+                  <img src="images/tour 21.jpeg" alt="Tour 21" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 27.jpeg" alt="Tour 27">
+          <div>
+            <h3>Wildlife Photography</h3>
+                  <img src="images/tour 22.jpeg" alt="Tour 22" loading="lazy">
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 28.jpeg" alt="Tour 28">
+          <div>
+            <h3>Cultural Festivals</h3>
+            <p>Visit local events and festivals.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 29.jpeg" alt="Tour 29">
+          <div>
+            <h3>Camping Escapes</h3>
+            <p>Outdoor camping experiences under the stars.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 30.jpeg" alt="Tour 30">
+          <div>
+            <h3>Community Visits</h3>
+            <p>Engage with local communities on meaningful visits.</p>
+          </div>
+        </article>
+        <article class="destination-card">
+          <img src="images/tour 31.jpeg" alt="Tour 31">
+          <div>
+            <h3>Special Interest Trips</h3>
+            <p>Tailor-made trips for niche interests.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-header">
+        <p class="eyebrow">Start Your Journey</p>
+        <h2>Booking made simple</h2>
+      </div>
+      <p class="section-text">Ready to travel with confidence? Our team will design a complete package with transport, accommodation, activities, and local support so you can focus on enjoying the moment.</p>
+      <div class="cta-banner">
+        <div>
+          <h3>Plan with a local expert</h3>
+          <p>Contact us for a free consultation and let us build a memorable Uganda experience just for you.</p>
+        </div>
+        <a href="plantrip.html" class="btn btn-primary">Start Booking</a>
+      </div>
+      <div class="map-card" style="margin-top:1.25rem;">
+        <img src="images/Uganda-Map.webp" alt="Uganda map" style="width:100%;border-radius:12px;" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section container" id="gallery" data-reveal>
+      <div class="section-header">
+        <p class="eyebrow">Gallery</p>
+        <h2>Our Travel Photos</h2>
+      </div>
+      <div class="gallery-grid">
+        <figure class="gallery-item hero-figure">
+          <img src="images/tour 1.avif" alt="Kazinga Channel at Queen Elizabeth National Park" loading="lazy">
+          <figcaption>Kazinga Channel — wildlife and boat cruises</figcaption>
+          <div class="hero-overlay">
+            <h1>Welcome to Sharine Tours</h1>
+            <p>Explore Uganda's beautiful destinations</p>
+            <a href="plantrip.html" class="btn btn-primary">Book a Tour</a>
+          </div>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/bacground.webp" alt="Scenic landscape background" loading="lazy">
+          <figcaption>Scenic landscape used as a background</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 1.avif" alt="Kazinga Channel at Queen Elizabeth National Park" loading="lazy">
+          <figcaption>Kazinga Channel — wildlife and boat cruises</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 2.avif" alt="Bwindi Impenetrable Forest gorilla trekking" loading="lazy">
+          <figcaption>Bwindi — mountain gorilla trekking experience</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 3.avif" alt="Murchison Falls dramatic waterfall" loading="lazy">
+          <figcaption>Murchison Falls — the Nile plunges through a gorge</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 4.avif" alt="Lake Bunyonyi islands and cottages" loading="lazy">
+          <figcaption>Lake Bunyonyi — peaceful lakeside islands</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 5.avif" alt="Jinja and the Source of the Nile" loading="lazy">
+          <figcaption>Jinja — Source of the Nile and riverside activities</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 6.webp" alt="Scenic viewpoints and rolling hills" loading="lazy">
+          <figcaption>Scenic viewpoints — rolling hills and panoramas</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 7.jpg" alt="Kampala city life and markets" loading="lazy">
+          <figcaption>Kampala — city culture, markets and local life</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 8.jpg" alt="Lake waterfront retreat" loading="lazy">
+          <figcaption>Lakefront retreat — relaxation by the water</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 9.webp" alt="Wetlands and birdlife" loading="lazy">
+          <figcaption>Wetlands — rich birdlife and quiet habitats</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 10.webp" alt="Sunset over the savannah" loading="lazy">
+          <figcaption>Sunset over the savannah — dramatic skies</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 11.jpeg" alt="Local community visit" loading="lazy">
+          <figcaption>Community visits — cultural exchange and local stories</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 12.jpeg" alt="Forest hiking trail" loading="lazy">
+          <figcaption>Forest trails — guided hikes through lush forest</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 13.jpeg" alt="Wildlife on safari" loading="lazy">
+          <figcaption>Safari wildlife — close encounters and game drives</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 14.jpeg" alt="Traditional cultural performance" loading="lazy">
+          <figcaption>Cultural performance — music and traditional gatherings</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 15.jpeg" alt="Lake and wildlife reserve" loading="lazy">
+          <figcaption>Lake & wildlife — combined lake and wildlife visits</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 16.jpeg" alt="Cultural highlights and village visits" loading="lazy">
+          <figcaption>Cultural highlights — village visits and local life</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 17.jpeg" alt="Sunset retreats across Uganda" loading="lazy">
+          <figcaption>Sunset retreats — beautiful evening vistas</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 18.jpeg" alt="Birdwatching in Uganda" loading="lazy">
+          <figcaption>Birdwatching trips — ideal for birding enthusiasts</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 19.jpeg" alt="River adventures and boat cruises" loading="lazy">
+          <figcaption>River adventures — boat cruises and riverside fun</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 20.jpeg" alt="Hiking routes and scenic trails" loading="lazy">
+          <figcaption>Hiking routes — trails for varied fitness levels</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 21.jpeg" alt="Photography trips and landscapes" loading="lazy">
+          <figcaption>Photography trips — capture landscapes and wildlife</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 22.jpeg" alt="Island getaways on tranquil lakes" loading="lazy">
+          <figcaption>Island getaways — peaceful island escapes</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 23.jpeg" alt="Adventure sports and activities" loading="lazy">
+          <figcaption>Adventure sports — adrenaline activities for thrill-seekers</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 24.jpeg" alt="Forest walking trails" loading="lazy">
+          <figcaption>Forest walks — gentle guided nature walks</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 25.jpeg" alt="Wellness retreats and relaxation" loading="lazy">
+          <figcaption>Wellness retreats — rest, yoga and relaxation offers</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 26.jpeg" alt="Scenic drives through countryside" loading="lazy">
+          <figcaption>Scenic drives — picturesque road journeys</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 27.jpeg" alt="Wildlife photography opportunities" loading="lazy">
+          <figcaption>Wildlife photography — specialist photo tours</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 28.jpeg" alt="Cultural festivals and events" loading="lazy">
+          <figcaption>Cultural festivals — local events and celebrations</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 29.jpeg" alt="Camping under the stars" loading="lazy">
+          <figcaption>Camping escapes — nights beneath the African sky</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 30.jpeg" alt="Community visits and homestays" loading="lazy">
+          <figcaption>Community visits — meaningful local engagement</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/tour 31.jpeg" alt="Tailor-made special interest trips" loading="lazy">
+          <figcaption>Special interest — tailor-made trips for niche interests</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/Uganda-Map.webp" alt="Map of Uganda" loading="lazy">
+          <figcaption>Map of Uganda — key destinations and regions</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Sharine Tours</h3>
+        <p>Authentic Uganda travel experiences crafted with care, expertise, and trusted hospitality.</p>
+        <p>Contact: <a href="mailto:sharinetour@gmail.com">sharinetour@gmail.com</a> • WhatsApp: <a href="https://wa.me/256705058048">+256 705 058048</a></p>
+      </div>
+      <div class="footer-links">
+        <a href="destinations.html">Tours</a>
+        <a href="services.html">Services</a>
+        <a href="plantrip.html">Book Now</a>
+      </div>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Twitter">Twitter</a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2026 Sharine Tours. All rights reserved.</p>
+  </footer>
+  <a class="whatsapp-float" href="https://wa.me/256705058048?text=Hello%20Sharine%20Tours" target="_blank" rel="noreferrer noopener" aria-label="Chat on WhatsApp">WhatsApp</a>
+</body>
+</html>
